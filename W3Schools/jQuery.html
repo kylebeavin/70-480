@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>jQuery W3 Tutorial</title>
+</head>
+<body>
+    <h1>jQuery Tutorial</h1>
+    <section>
+        <h2>W3 Schools</h2>
+        <article id="1" hidden>
+                <h3>jQuery Syntax</h3>
+            <p>The jQuery syntax is tailor-made for selecting HTML elements and performing some action on the element(s).</p>
+            <p>Basic syntax is: $(selector).action()</p>
+            <ul>
+                <li>A $ sign to define/access jQuery</li>
+                <li>A (selector) to "query (or find)" HTML elements</li>
+                <li>A jQuery action() to be performed on the element(s)</li>
+            </ul>
+        </article>
+        <button id="2">jQuery Syntax</button>
+        <article id="3" hidden>
+                <h3>The Document Ready Event</h3>
+                <p>You might have noticed that all jQuery methods in our examples, are inside a document ready event:</p>
+                <p style="border: 1px dotted black">
+                    $(document).ready(function(){<br/>
+                        <br/>
+                        // jQuery methods go here...<br/>
+                        <br/>      
+                      });
+                </p>
+        </article>
+        <button id="4">The Document Ready Event</button>
+        <article id="5" hidden>
+            <h3>jQuery Selectors</h3>
+                <p>The jQuery element selector selects elements based on the element name.</p>
+                <p>You can select all <i>p</i> elements on a page like this:</p>
+                <p style="border: 1px dotted black">$("p")</p>
+                <p>Use the "#" Selector to select id, use the "." Selector to select class.<br/>
+                    For a complete reference of all the jQuery selectors, please go to 
+                    <a href="https://www.w3schools.com/jquery/jquery_ref_selectors.asp">jQuery Selectors Reference.</a>
+                </p>
+        </article>
+        <button id="6">jQuery Selectors</button>
+    </section>
+    <script type="text/javascript" src="jQuery.js"></script>
+</body>
+</html>
