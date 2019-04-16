@@ -71,6 +71,7 @@
     <Content Include="Content\default.css" />
     <Content Include="Content\qunit.css" />
     <Content Include="default.html" />
+    <Content Include="Images\ContosoLogo.png" />
     <Content Include="Scripts\CalculatorLibrary.js" />
     <Content Include="Scripts\qunit.js" />
     <Content Include="Scripts\tests.js" />
