@@ -98,19 +98,65 @@ function areaOfPizzaSlice(diameter, slicesPerPizza) {
 //    cost: 100                              //    cost: 100
 //};                                         //};
 
-//IIFE or iffy immediately invoked function expression
-(function () {
-    this.myApp = this.myApp || {};
-    var ns = this.myApp;            // ns = namespace
+////IIFE or iffy immediately invoked function expression
+//(function () {
+//    this.myApp = this.myApp || {};         // creates namespace if it doesnt already exist
+//    var rootNs = this.myApp;               // rootNs = namespace
+//    rootNs.billing = rootNs.billing || {}; // creates subnamespace if it doesnt already exist
+//    var ns = rootNs.billing;               // renaming saves typing from 'this.myApp' || 'rootNs.billing'
 
-    var vehicleCount = 5;           // private
-    var vehicles = new Array();     // private
+//    var taxRate = .05;                     // private
+//    ns.Invoice = function () { };          // public
+//    var vehicleCount = 5;                  // private
+//    var vehicles = new Array();            // private
 
-    ns.Car = function () { }        // public
-    ns.Truck = function () { }      // public
+//    rootNs.Car = function () { }           // public
+//    rootNs.Truck = function () { }         // public
 
-    var repair = {                  // private
-        description: 'changed spark plugs',
-        cost: 100
-    }
+//    var repair = {                         // private
+//        description: 'changed spark plugs',
+//        cost: 100
+//    }
+//}());
+
+//implementing inheritance
+var Vehicle = (function () {
+    function Vehicle(year, make, model) {
+        this.year = year;
+        this.make = make;
+        this.model = model;
+    };
+    Vehicle.prototype.getInfo = function () {
+        return this.year + ' ' + this.make + ' ' + this.model;
+    };
+    Vehicle.prototype.startEngine = function () {
+        return 'Vroom';
+    };
+    return Vehicle;
 }());
+// create child classes of Vehicle
+var Car = (function (parent) {
+    Car.prototype = new Vehicle();
+    Car.prototype.constructor = Car;
+    function Car(year, make, model) {
+        this.wheelQuantity = 4;
+        parent.call(this, year, make, model);
+    };
+    Car.prototype.getInfo = function () {
+        return 'Vehicle Type: Car ' + parent.prototype.getInfo.call(this);
+    }; 
+    return Car;
+}(Vehicle));
+
+var Boat = (function (parent) {
+    Boat.prototype = new Vehicle();
+    Boat.prototype.constructor = Boat;
+    function Boat(year, make, model) {
+        this.propellerBladeQuantity = 3;
+        parent.call(this, year, make, model);
+    };
+    Boat.prototype.getInfo = function () {
+        return 'Vehicle Type: Boat ' + parent.prototype.getInfo.call(this);
+    };
+    return Boat;
+}(Vehicle));
