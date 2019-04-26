@@ -84,3 +84,33 @@ function areaOfPizzaSlice(diameter, slicesPerPizza) {
 //}
 
 // implementing namespaces
+//var myApp = myApp || {};                   // doing this <= does not pollute the global namespace //added || this code uses the or operator to create a new object if myApp does not have value                     
+
+//myApp.vehicleCount = 5;                    //var vehicleCount = 5;                         
+
+//myApp.vehicles = new Array();              //var vehicles = new Array();                           
+
+//myApp.Car = function () { }                //function Car() { }
+//myApp.Truck = function () { }              //function Truck() { }                                                                
+
+//myApp.repair = {                           //var repair = {
+//    description: 'changed spark plugs',    //    description: 'changed spark plugs',                         
+//    cost: 100                              //    cost: 100
+//};                                         //};
+
+//IIFE or iffy immediately invoked function expression
+(function () {
+    this.myApp = this.myApp || {};
+    var ns = this.myApp;            // ns = namespace
+
+    var vehicleCount = 5;           // private
+    var vehicles = new Array();     // private
+
+    ns.Car = function () { }        // public
+    ns.Truck = function () { }      // public
+
+    var repair = {                  // private
+        description: 'changed spark plugs',
+        cost: 100
+    }
+}());
