@@ -1,0 +1,26 @@
+{
+  "name": "math_example_by_kyle_beavin",
+  "version": "1.0.0",
+  "description": "An example of creating a package",
+  "main": "bin/main.js",
+  "bin": {
+    "math_example_by_kyle_beavin": "main.js"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "math",
+    "example",
+    "addition",
+    "subtraction",
+    "multiplication",
+    "division",
+    "fibonacci"
+  ],
+  "author": "Glenn Johnson",
+  "license": "ISC"
+}
