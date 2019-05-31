@@ -10,8 +10,9 @@
   "license": "ISC",
   "private": true,
   "dependencies": {
-    "formidable": "1.x",
     "express": "4.x",
+    "formidable": "1.x",
+    "jquery": "^3.4.1",
     "math_example": "0.x"
   }
 }
