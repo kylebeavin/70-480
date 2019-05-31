@@ -24,6 +24,23 @@ app.post('/ContactMessage', function (request, response) {
     });
 });
 
+app.post('/ContactService', function (request, response) {
+    var form = new formidable.IncomingForm();
+    form.parse(request, function (err, fields) {
+        var lastName = fields.lastName,
+            firstName = fields.firstName,
+            email = fields.email,
+            message = fields.message;
+        result = 'Thank you, ' + firstName + ' ' + lastName + '<br />'
+            + 'We cill contact you at ' + email + '<br />'
+            + 'Your message: ' + message + '<br />';
+        
+        response.writeHead(200, { 'Content-Type': 'text/html' });
+        response.end('{ "result": "' + result + '"}');
+        console.log('Handled service request for ' + firstName + ' ' + lastName);
+    });
+});
+
 var port = 8080;
 app.listen(port);
 console.log('Listening on port: ' + port);
