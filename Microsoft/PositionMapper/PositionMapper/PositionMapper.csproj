@@ -69,7 +69,10 @@
   <ItemGroup>
     <Content Include="BasicPosition.html" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="default.css" />
+    <Content Include="default.html" />
     <Content Include="GeoLocation.css" />
+    <Content Include="Scripts\default.js" />
     <Content Include="Scripts\GeoLocation.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
