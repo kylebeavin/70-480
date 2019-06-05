@@ -68,10 +68,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FavCars.html" />
+    <Content Include="FileDragAndDrop.css" />
+    <Content Include="FileDragAndDrop.html" />
     <Content Include="MicroScramble.css" />
     <Content Include="MicroScramble.html" />
     <Content Include="Scripts\CarList.js" />
     <None Include="Scripts\jquery-2.2.4.intellisense.js" />
+    <Content Include="Scripts\FileDragAndDrop.js" />
     <Content Include="Scripts\jquery-2.2.4.js" />
     <Content Include="Scripts\jquery-2.2.4.min.js" />
     <Content Include="Scripts\MicroScramble.js" />
