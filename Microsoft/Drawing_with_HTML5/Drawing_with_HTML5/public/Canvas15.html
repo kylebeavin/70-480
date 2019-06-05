@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Drawing images</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="800" height="600" style="border: 1px solid black;">
+        You need a browser that supports HTML5!
+    </canvas>
+    <a href="Canvas16.html">Next</a>
+    <script>
+        drawSomething();
+
+        function drawSomething() {
+            var canvas = document.getElementById("myCanvas")
+                , ctx = canvas.getContext("2d");
+
+            var img = new Image();
+            img.src = "images/iceboat.jpg";
+            img.onload = function () {
+                ctx.drawImage(img, 0, 0, 300, 400);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Drawing arcs by using the arcTo method</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="800" height="600" style="border: 1px solid black;">
+        You need a browser that supports HTML5!
+    </canvas>
+    <a href="Canvas12.html">Next</a>
+    <canvas id="myCanvas2" width="800" height="600" style="border: 1px solid black;">
+        You need a browser that supports HTML5!
+    </canvas>
+    <p>The two canvas elements are the same except for the radius. This represents how the arcTo method works.</p>
+    <script>
+        drawSomething();
+
+        function drawSomething() {
+            var canvas = document.getElementById("myCanvas")
+                , ctx = canvas.getContext("2d");
+
+            ctx.strokeStyle = 'gray';
+            ctx.lineWidth = 1;
+
+            ctx.beginPath();
+            ctx.moveTo(300, 200);
+            ctx.lineTo(400, 500);
+            ctx.lineTo(600, 300);
+            ctx.stroke();
+
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth = 5;
+            ctx.beginPath();
+            ctx.moveTo(300, 200);
+            ctx.arcTo(400, 500, 600, 300, 50);
+            ctx.stroke();
+        }
+        drawSomething2();
+
+        function drawSomething2() {
+            var canvas = document.getElementById("myCanvas2")
+                , ctx = canvas.getContext("2d");
+
+            ctx.strokeStyle = 'gray';
+            ctx.lineWidth = 1;
+
+            ctx.beginPath();
+            ctx.moveTo(300, 200);
+            ctx.lineTo(400, 500);
+            ctx.lineTo(600, 300);
+            ctx.stroke();
+
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth = 5;
+            ctx.beginPath();
+            ctx.moveTo(300, 200);
+            ctx.arcTo(400, 500, 600, 300, 300);
+            ctx.stroke();
+        }
+    </script>
+</body>
+</html>
