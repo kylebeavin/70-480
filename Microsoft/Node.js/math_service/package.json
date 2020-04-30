@@ -12,7 +12,7 @@
   "dependencies": {
     "express": "4.x",
     "formidable": "1.x",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "math_example": "0.x"
   }
 }
